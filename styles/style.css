@@ -1,6 +1,6 @@
 body {
     background: #fafafa;
-    color: #333;
+    color: #10334C;
     font-family: opensans,Helvetica,Arial,sans-serif;
     font-size: .85em;
     font-weight: 400;
@@ -10,35 +10,75 @@ body {
 }
 
 .center-block {
-    margin: 40px;
+  margin: 40px;
+  width: 622px;
+  height: 832px;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 33px;
+  letter-spacing: -0.045em;
+}
+
+p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  letter-spacing: -0.038em;
+  color: #10334C;
+}
+
+.note {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 125.68%;
+  letter-spacing: -0.038em;
 }
 
 label {
-    display: block;
-    margin-bottom: 10px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 125.68%;
 }
 
 select {
-    display: block;
-    border: 1px solid #919191;
-    box-shadow: none;
-    cursor: pointer;
-    line-height: normal;
-    padding-top: 1px;
-    padding-right: 30px;
-    background: none repeat scroll 0 0 #fff;
-    background-clip: padding-box;
-    border-radius: 2px;
-    box-sizing: border-box;
-    color: #1d1d1d;
-    font-family: opensans,Helvetica,Arial,sans-serif;
-    font-size: 1em;
-    font-style: normal;
-    font-weight: 400;
-    height: 36px;
-    margin: 0;
-    padding: 3px 10px;
-    text-align: left;
-    text-decoration: none;
-    vertical-align: middle;
+  display: block;
+  border: 1px solid #919191;
+  box-shadow: none;
+  cursor: pointer;
+  line-height: normal;
+  padding-top: 1px;
+  padding-right: 30px;
+  background: none repeat scroll 0 0 #FFFFFF;
+  background-clip: padding-box;
+  border-radius: 2px;
+  box-sizing: border-box;
+  color: #1d1d1d;
+  font-family: opensans,Helvetica,Arial,sans-serif;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 400;
+  height: 36px;
+  width: 250px;
+  margin-top: 5px;
+  padding: 3px 10px;
+  text-align: left;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+button {
+  color: white;
+  background: #235781;
+  border-radius: 2px;
+  padding:10px 20px;
+  font-family: opensans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 22px;
+  margin-top: 50px;
 }

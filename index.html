@@ -1,22 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Shamrock dropdown styling -->
+  <!-- Link to stylesheet -->
   <link rel="stylesheet" type="text/css" href="./styles/style.css">
 </head>
 
 <body>
   <div class="center-block">
-    <label for="region-select">Please select the state you are interested in receiving information about.</label>
-    <select id="region-select" onchange="loadOverlay()">
-      <option value="16522">Alabama</option>
-      <option value="15782">Alaska</option>
-      <option value="14342">Arizona</option>
-      <option value="14822">California</option>
-      <option value="16702">Colorado</option>
-      <option value="14122">Minnesota</option>
-      <option value="15042">Wyoming</option>
+    <h4>Subscribe to COVID-19 updates from local agencies.</h4>
+    <p>Granicus has compiled region-specific lists of account topics which have recently sent subscribers information about COVID-19. These topics are not necessarily related to COVID-19 or public health, but may send related updates in the future. You can subscribe to as many or as few topics from the lists as desired, and unsubscribe at any time. 
+    <p><span class="note">Note: If there are no accounts in your region that have previously sent information about COVID-19, you can still receive updates from federal agencies.</span></p>
+    <label for="region-select">Please select a state you are interested in receiving information about:</label>
+    <select id="region-select">
+      <option value="" selected="true" disabled>Select a state</option>
+      <option value="14809">Alabama</option>
+      <option value="14808">Alaska</option>
+      <option value="14813">American Samoa</option>
+      <option value="14813">Arizona</option>
+      <option value="14813">Arkansas</option>
+      <option value="14812">California</option>
+      <option value="14813">Colorado</option>
+      <option value="14813">Connecticut</option>
+      <option value="14813">Delaware</option>
+      <option value="14814">District of Columbia</option>
+      <option value="14816">Florida</option>
+      <option value="14813">Georgia</option>
+      <option value="14813">Guam</option>
+      <option value="14813">Hawaii</option>
+      <option value="14813">Idaho</option>
+      <option value="14811">Illinois</option>
+      <option value="14817">Indiana</option>
+      <option value="14828">Iowa</option>
+      <option value="14813">Kansas</option>
+      <option value="14813">Kentucky</option>
+      <option value="14813">Louisiana</option>
+      <option value="14819">Maine</option>
+      <option value="14820">Maryland</option>
+      <option value="14813">Massachusetts</option>
+      <option value="14822">Michigan</option>
+      <option value="14821">Minnesota</option>
+      <option value="14813">Mississippi</option>
+      <option value="14813">Missouri</option>
+      <option value="14829">Montana</option>
+      <option value="14824">Nebraska</option>
+      <option value="14813">Nevada</option>
+      <option value="14813">New Hampshire</option>
+      <option value="14813">New Jersey</option>
+      <option value="14813">New Mexico</option>
+      <option value="14815">New York</option>
+      <option value="14813">North Carolina</option>
+      <option value="14813">North Dakota</option>
+      <option value="14813">Northern Mariana Islands</option>
+      <option value="14813">Ohio</option>
+      <option value="14826">Oklahoma</option>
+      <option value="14827">Oregon</option>
+      <option value="14813">Pennsylvania</option>
+      <option value="14813">Puerto Rico</option>
+      <option value="14813">Rhode Island</option>
+      <option value="14813">South Carolina</option>
+      <option value="14813">South Dakota</option>
+      <option value="14823">Tennessee</option>
+      <option value="14810">Texas</option>
+      <option value="14813">United States Minor Outlying Islands</option>
+      <option value="14813">Utah</option>
+      <option value="14813">Vermont</option>
+      <option value="14813">Virgin Islands, U.S.</option>
+      <option value="14813">Virginia</option>
+      <option value="14818">Washington</option>
+      <option value="14813">West Virginia</option>
+      <option value="14813">Wisconsin</option>
+      <option value="14813">Wyoming</option>
     </select>
+    <button onclick="loadOverlay()">Next</button>
   </div>
   
   <!--Creates script tag for overlay signup-->
@@ -25,9 +80,9 @@
       localStorage.clear();
       let id = document.getElementById("region-select").value;
       let script = document.createElement("script");
-      script.src="https://qc-public.govdelivery.com/assets/SignupOverlay.js";
+      script.src="https://public.govdelivery.com/assets/SignupOverlay.js";
       script.setAttribute("class", "govd-state-overlay");
-      script.setAttribute("data-account-code", "KARATEST");
+      script.setAttribute("data-account-code", "GOVENGAGE");
       script.setAttribute("data-signup-id", `${id}`);
       script.setAttribute("async", "");
       script.setAttribute("data-width", "500");
