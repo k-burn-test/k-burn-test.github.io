@@ -3,10 +3,10 @@ function populateSelect(){
     var options = ['topic1', 'topic2'];
 
     for(var i = 0; i < options.length; i++) {
-    var opt = options[i];
-    var el = document.createElement("option");
-    el.textContent = opt;
-    el.value = opt;
-    select.add(el);
-    }​;
+      var opt = options[i];
+      var el = document.createElement("option");
+      el.textContent = opt;
+      el.value = opt;
+      select.add(el);
+    }​
 }
