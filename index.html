@@ -9,13 +9,27 @@
     <title>Test Dropdown</title>
 
     <script src="https://qc-public.govdelivery.com/assets/SignupOverlay.js" data-account-code="KARATEST" data-signup-id="15042" async="" data-width="500" data-delay="0"></script>
-    <script src="./javascript/index.js"></script>
+  
+    <script>
+      function populateSelect(){
+        var select = document.getElementById("region-select");
+        var options = ['topic1', 'topic2'];
+
+        for(var i = 0; i < options.length; i++) {
+          var opt = options[i];
+          var el = document.createElement("option");
+          el.textContent = opt;
+          el.value = opt;
+          select.add(el);
+        }​;
+      }
+    </script>
     <!-- Custom styles for this template -->
 
   </head>
 
-  <body>
-    <p>Hello World</p>
+  <body onload="populateSelect()">
+    <p>Hello World Update</p>
     <select id="region-select">
     </select>
   </body>
