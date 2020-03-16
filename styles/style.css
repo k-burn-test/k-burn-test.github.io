@@ -9,8 +9,13 @@ body {
     margin: 0;
 }
 
+.center-block {
+    margin: 40px;
+}
+
 label {
     display: block;
+    margin-bottom: 10px;
 }
 
 select {

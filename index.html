@@ -1,66 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- Shamrock select styling -->
+  <!-- Shamrock dropdown styling -->
   <link rel="stylesheet" type="text/css" href="./styles/style.css">
 </head>
 
 <body>
-  <label for="region-select">Please select the state you are interested in receiving information about.</label>
-  <select id="region-select" onchange="myFunction()">
-    <option value="">Alabama</option>
-    <option value="15782">Alaska</option>
-    <option value="">Arizona</option>
-    <option value="">California</option>
-    <option value="">Colorado</option>
-    <option value="">Connecticut</option>
-    <option value="">Delaware</option>
-    <option value="">Florida</option>
-    <option value="">Georgia</option>
-    <option value="">Hawaii</option>
-    <option value="">Idaho</option>
-    <option value="">Illinois</option>
-    <option value="">Indiana</option>
-    <option value="">Iowa</option>
-    <option value="">Kansas</option>
-    <option value="">Kentucky</option>
-    <option value="">Louisiana</option>
-    <option value="">Maine</option>
-    <option value="">Maryland</option>
-    <option value="">Massachusetts</option>
-    <option value="14122">Minnesota</option>
-    <option value="">New York</option>
-    <option value="">Oregon</option>
-    <option value="">Virginia</option>
-    <option value="">Wisconsin</option>
-    <option value="15042">Wyoming</option>
-  </select>
+  <div class="center-block">
+    <label for="region-select">Please select the state you are interested in receiving information about.</label>
+    <select id="region-select" onchange="loadOverlay()">
+      <option value="16522">Alabama</option>
+      <option value="15782">Alaska</option>
+      <option value="14342">Arizona</option>
+      <option value="14822">California</option>
+      <option value="16702">Colorado</option>
+      <option value="14122">Minnesota</option>
+      <option value="15042">Wyoming</option>
+    </select>
+  </div>
   
   <!--Creates script tag for overlay signup-->
   <script>
-    function myFunction() {
+    function loadOverlay() {
       localStorage.clear();
-      var x = document.getElementById("region-select").value;
-      console.log("Whoopee!");
+      let id = document.getElementById("region-select").value;
       let script = document.createElement("script");
       script.src="https://qc-public.govdelivery.com/assets/SignupOverlay.js";
-      script.class="govd-state-overlay";
+      script.setAttribute("class", "govd-state-overlay");
       script.setAttribute("data-account-code", "KARATEST");
-      script.setAttribute("data-signup-id", `${x}`);
+      script.setAttribute("data-signup-id", `${id}`);
       script.setAttribute("async", "");
       script.setAttribute("data-width", "500");
       script.setAttribute("data-delay","0");
-      var scripts = document.getElementsByClassName("govd-state-overlay");
+      let scripts = document.getElementsByClassName("govd-state-overlay");
       if(scripts.length > 0){
-        document.head.replaceChild(script, document.head.childNodes[1]);
+        document.head.replaceChild(script, document.head.getElementsByClassName("govd-state-overlay")[0]);
       } else {
         document.head.appendChild(script);
       }
     }
   </script>
 </body>
-
 </html>
-
-
