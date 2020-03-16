@@ -7,4 +7,4 @@ for(var i = 0; i < options.length; i++) {
     el.textContent = opt;
     el.value = opt;
     select.add(el);
-}​;
+}​
