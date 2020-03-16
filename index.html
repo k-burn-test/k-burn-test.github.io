@@ -1,38 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
+  <!-- Shamrock select styling -->
+  <link rel="stylesheet" type="text/css" href="./styles/style.css">
+</head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>Test Dropdown</title>
-
-    <script src="https://qc-public.govdelivery.com/assets/SignupOverlay.js" data-account-code="KARATEST" data-signup-id="15042" async="" data-width="500" data-delay="0"></script>
+<body>
+  <label for="region-select">Please select the state you are interested in receiving information about.</label>
+  <select id="region-select" onchange="myFunction()">
+    <option value="">Alabama</option>
+    <option value="15782">Alaska</option>
+    <option value="">Arizona</option>
+    <option value="">California</option>
+    <option value="">Colorado</option>
+    <option value="">Connecticut</option>
+    <option value="">Delaware</option>
+    <option value="">Florida</option>
+    <option value="">Georgia</option>
+    <option value="">Hawaii</option>
+    <option value="">Idaho</option>
+    <option value="">Illinois</option>
+    <option value="">Indiana</option>
+    <option value="">Iowa</option>
+    <option value="">Kansas</option>
+    <option value="">Kentucky</option>
+    <option value="">Louisiana</option>
+    <option value="">Maine</option>
+    <option value="">Maryland</option>
+    <option value="">Massachusetts</option>
+    <option value="14122">Minnesota</option>
+    <option value="">New York</option>
+    <option value="">Oregon</option>
+    <option value="">Virginia</option>
+    <option value="">Wisconsin</option>
+    <option value="15042">Wyoming</option>
+  </select>
   
-    <script>
-      function populateSelect(){
-        var select = document.getElementById("region-select");
-        var options = ['topic1', 'topic2'];
-
-        for(var i = 0; i < options.length; i++) {
-          var opt = options[i];
-          var el = document.createElement("option");
-          el.textContent = opt;
-          el.value = opt;
-          select.add(el);
-        }​
-      return;
+  <!--Creates script tag for overlay signup-->
+  <script>
+    function myFunction() {
+      localStorage.clear();
+      var x = document.getElementById("region-select").value;
+      console.log("Whoopee!");
+      let script = document.createElement("script");
+      script.src="https://qc-public.govdelivery.com/assets/SignupOverlay.js";
+      script.class="govd-state-overlay";
+      script.setAttribute("data-account-code", "KARATEST");
+      script.setAttribute("data-signup-id", `${x}`);
+      script.setAttribute("async", "");
+      script.setAttribute("data-width", "500");
+      script.setAttribute("data-delay","0");
+      var scripts = document.getElementsByClassName("govd-state-overlay");
+      if(scripts.length > 0){
+        document.head.replaceChild(script, document.head.childNodes[1]);
+      } else {
+        document.head.appendChild(script);
       }
-    </script>
-    <!-- Custom styles for this template -->
-
-  </head>
-
-  <body>
-    <p>Hello World Update</p>
-    <select id="region-select">
-    </select>
-  </body>
+    }
+  </script>
+</body>
 
 </html>
+
+

@@ -1,0 +1,39 @@
+body {
+    background: #fafafa;
+    color: #333;
+    font-family: opensans,Helvetica,Arial,sans-serif;
+    font-size: .85em;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6em;
+    margin: 0;
+}
+
+label {
+    display: block;
+}
+
+select {
+    display: block;
+    border: 1px solid #919191;
+    box-shadow: none;
+    cursor: pointer;
+    line-height: normal;
+    padding-top: 1px;
+    padding-right: 30px;
+    background: none repeat scroll 0 0 #fff;
+    background-clip: padding-box;
+    border-radius: 2px;
+    box-sizing: border-box;
+    color: #1d1d1d;
+    font-family: opensans,Helvetica,Arial,sans-serif;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 400;
+    height: 36px;
+    margin: 0;
+    padding: 3px 10px;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: middle;
+}
